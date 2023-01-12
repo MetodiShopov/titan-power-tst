@@ -1175,16 +1175,16 @@
     window.onload = () => {
       let img_parent = document.getElementsByClassName('grid__item product__media-wrapper')[0];
 
-      img_parent.classList.toggle("load_style", "load_style_shine", "hide_index");
+      img_parent.classList.add("load_style", "load_style_shine", "hide_index");
       
       setTimeout(() => {
-        img_parent.classList.toggle("load_style");
+        img_parent.classList.remove("load_style");
       }, "1000")
       setTimeout(() => {
-        img_parent.classList.toggle("load_style_shine");
+        img_parent.classList.remove("load_style_shine");
       }, "2000")
       setTimeout(() => {
-        img_parent.classList.toggle("hide_index");
+        img_parent.classList.remove("hide_index");
       }, "3000")
     };
   </script>
