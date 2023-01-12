@@ -1125,25 +1125,6 @@
       assign seo_media = product.featured_media
     endif
   -%}
-
-  <script>
-    window.onload = (event) => {
-      let img_parent = document.getElementsByClassName('grid__item product__media-wrapper')[0];
-
-      img_parent.classList.toggle("load_style");
-      img_parent.classList.toggle("load_style_shine");
-      img_parent.classList.toggle("hide_index");
-      setTimeout(() => {
-        img_parent.classList.toggle("load_style");
-      }, "1000")
-      setTimeout(() => {
-        img_parent.classList.toggle("load_style_shine");
-      }, "2000")
-      setTimeout(() => {
-        img_parent.classList.toggle("hide_index");
-      }, "3000")
-    };
-  </script>
   
   <script type="application/ld+json">
     {
@@ -1188,6 +1169,24 @@
         {%- endfor -%}
       ]
     }
+  </script>
+  
+  <script>
+    window.onload = () => {
+      let img_parent = document.getElementsByClassName('grid__item product__media-wrapper')[0];
+
+      img_parent.classList.toggle("load_style", "load_style_shine", "hide_index");
+      
+      setTimeout(() => {
+        img_parent.classList.toggle("load_style");
+      }, "1000")
+      setTimeout(() => {
+        img_parent.classList.toggle("load_style_shine");
+      }, "2000")
+      setTimeout(() => {
+        img_parent.classList.toggle("hide_index");
+      }, "3000")
+    };
   </script>
 </section>
 

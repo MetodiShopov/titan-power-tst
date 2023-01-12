@@ -1243,6 +1243,8 @@ a.product__text {
 
 
 /* Titan Power tst cusom styles */
+
+/* OProduct description styles */
 .shopify-block.shopify-app-block .spr-starrating,
 .shopify-block.shopify-app-block .spr-starrating .link {
   color: #7F7F7F;
@@ -1275,6 +1277,7 @@ a.product__text {
   }
 }
 
+/* Product price styles */
 .no-js-hidden > div > div > div.price__sale .price-item.price-item--regular {
   color: #C9C9C9;
   font-size: 18px;
@@ -1295,6 +1298,7 @@ a.product__text {
   letter-spacing: initial;
 }
 
+/* Product variants styles */
 .product-form__input.product-form__input--dropdown .select__select {
   background-color: #131313;
   color: #efefef;
@@ -1334,8 +1338,7 @@ a.product__text {
   box-shadow: unset;
 }
 
-
-.product-form .product-form__buttons .product-form__submit{
+.product-form .product-form__buttons .product-form__submit {
   font-size: 30px;
   font-weight: 800;
   padding: 20px;
@@ -1359,7 +1362,7 @@ a.product__text {
   color: white;
 }
 
-/* On load effects on img */
+/* On load effects on Product section image wrapper */
 
 .product__media-item.grid__item.slider__slide.is-active .product__media {
   border: unset;
