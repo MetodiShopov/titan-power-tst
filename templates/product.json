@@ -3,9 +3,14 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "0576a49c-94f8-4e9c-b06a-d43058e1b428": {
-          "type": "rating",
+        "ff063857-9209-4614-acd5-9e0b6639f638": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
           "settings": {
+            "stars_fill_color": "#000000",
+            "star_size": 15,
+            "text_align": "flex-start",
+            "product": "{{product}}",
+            "stars_text_empty": "No reviews"
           }
         },
         "title": {
@@ -39,16 +44,22 @@
           "settings": {
             "show_dynamic_checkout": false
           }
+        },
+        "579ccbd0-8451-4c86-be26-a77d726cb7ae": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "0576a49c-94f8-4e9c-b06a-d43058e1b428",
+        "ff063857-9209-4614-acd5-9e0b6639f638",
         "title",
         "description",
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "579ccbd0-8451-4c86-be26-a77d726cb7ae"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -79,32 +90,10 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "167351855096a21f58": {
-      "type": "apps",
-      "blocks": {
-        "61dca530-df12-4633-b7b4-43ba1bd12aad": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-            "stars_fill_color": "#000000",
-            "star_size": 15,
-            "text_align": "center",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
-          }
-        }
-      },
-      "block_order": [
-        "61dca530-df12-4633-b7b4-43ba1bd12aad"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
-    "product-recommendations",
-    "167351855096a21f58"
+    "product-recommendations"
   ]
 }
