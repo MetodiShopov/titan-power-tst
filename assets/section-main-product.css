@@ -57,14 +57,14 @@
 
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 65%;
-    width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 50%;
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
     padding: 0 0 0 4rem;
-    max-width: 35%;
-    width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 50%;
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media).product--right .product__info-wrapper {
@@ -458,10 +458,6 @@ a.product__text {
 .product--no-media fieldset.product-form__input {
   flex-wrap: wrap;
   margin: 0 auto 1.2rem auto;
-}
-
-.product-form__buttons {
-  max-width: 44rem;
 }
 
 .product--no-media .product__info-container > modal-opener {
@@ -1243,4 +1239,122 @@ a.product__text {
   width: 1.2rem;
   margin-left: 1.2rem;
   flex-shrink: 0;
+}
+
+
+/* Titan Power tst cusom styles */
+.shopify-block.shopify-app-block .spr-starrating,
+.shopify-block.shopify-app-block .spr-starrating .link {
+  color: #7F7F7F;
+}
+
+.product__info-container.product__info-container--sticky > div.product__description.rte.quick-add-hidden > .heading {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.4;
+  font-family: "Raleway";
+}
+
+.product__info-container.product__info-container--sticky > div.product__description.rte.quick-add-hidden > .lightning-text {
+  font-size: 18px;
+  line-height: 1.4;
+}
+.product__info-container.product__info-container--sticky > div.product__description.rte.quick-add-hidden > .green-wow {
+  font-size: 30px;
+  font-weight: 800;
+  color: #60C655;
+  line-height: 1.2;
+}
+@media screen and (min-width: 990px) {
+  .product__info-container.product__info-container--sticky > div.product__description.rte.quick-add-hidden > .heading {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+  .product__info-container.product__info-container--sticky > div.product__description.rte.quick-add-hidden > .green-wow {
+    font-size: 28px;
+  }
+}
+
+.no-js-hidden > div > div > div.price__sale .price-item.price-item--regular {
+  color: #C9C9C9;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.no-js-hidden > div > div > div.price__sale .price-item.price-item--sale.price-item--last {
+  display: block;
+  font-size: 30px;
+  font-weight: 800;
+  color: #60C655;
+  line-height: 1.2;
+}
+.no-js-hidden > div > div > div.price__sale .price-item.price-item--sale.price-item--last .free_deliver {
+  font-size: initial;
+  font-weight: inherit;
+  color: #fff;
+  line-height: initial;
+  letter-spacing: initial;
+}
+
+.product-form__input.product-form__input--dropdown .select__select {
+  background-color: #131313;
+  color: #efefef;
+  border-radius: 10px;
+  border: 0.75px solid #fff;
+  padding: 8px 24px 8px 8px;
+  font-size: 16px;
+  box-shadow: unset;
+}
+.product-form__input.product-form__input--dropdown .select__select:hover,
+.product-form__input.product-form__input--dropdown .select__select:focus {
+  border-color: #60C655;
+}
+.product-form__input.product-form__input--dropdown .select::after {
+  box-shadow: unset;
+}
+
+.product-form__input.product-form__quantity .quantity {
+  background-color: #131313;
+  color: #efefef;
+  border-radius: 10px;
+  border: 0.75px solid #fff;
+  padding: 8px 24px 8px 8px;
+  font-size: 16px;
+  box-shadow: unset;
+  padding: unset;
+}
+.product-form__input.product-form__quantity .quantity__input {
+  background-color: black;
+  font-size: 16px;
+}
+.product-form__input.product-form__quantity .quantity__button {
+  color: #60C655;
+  border-radius: inherit;
+}
+.product-form__input.product-form__quantity .quantity:after {
+  box-shadow: unset;
+}
+
+
+.product-form .product-form__buttons .product-form__submit{
+  font-size: 30px;
+  font-weight: 800;
+  padding: 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+.product-form .product-form__buttons .product-form__submit::before {
+  content: '⚡';
+  z-index: 1;
+  position: inherit;
+}
+.product-form .product-form__buttons .product-form__submit:after {
+  box-shadow: unset;
+}
+.product-form .product-form__buttons .not_available {
+  line-height: 1.6;
+  color: #60C655;
+  font-size: 16px;
+}
+.product-form .product-form__buttons .not_available span {
+  color: white;
 }

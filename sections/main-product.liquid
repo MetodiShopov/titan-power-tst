@@ -334,8 +334,9 @@
               </div>
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
               </div>
+              {%- comment -%}
               {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
                 <div class="product__tax caption rte">
                   {%- if shop.taxes_included -%}
@@ -346,6 +347,7 @@
                   {%- endif -%}
                 </div>
               {%- endif -%}
+              {%- endcomment -%}
               <div {{ block.shopify_attributes }}>
                 {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                 {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
@@ -384,9 +386,11 @@
                 class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
                 {{ block.shopify_attributes }}
               >
+              {% comment %}
                 <label class="form__label" for="Quantity-{{ section.id }}">
                   {{ 'products.product.quantity.label' | t }}
                 </label>
+              {% endcomment %}
 
                 <quantity-input class="quantity">
                   <button class="quantity__button no-js-hidden" name="minus" type="button">
@@ -514,9 +518,11 @@
                   >
                     {%- for option in product.options_with_values -%}
                       <div class="product-form__input product-form__input--dropdown">
+                        {% comment %}
                         <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
                           {{ option.name }}
                         </label>
+                        {% endcomment %}
                         <div class="select">
                           <select
                             id="Option-{{ section.id }}-{{ forloop.index0 }}"
@@ -616,7 +622,7 @@
                       >
                         <span>
                           {%- if product.selected_or_first_available_variant.available -%}
-                            {{ 'products.product.add_to_cart' | t }}
+                             {{ 'products.product.add_to_cart' | t }}
                           {%- else -%}
                             {{ 'products.product.sold_out' | t }}
                           {%- endif -%}
@@ -637,6 +643,7 @@
                       {%- if block.settings.show_dynamic_checkout -%}
                         {{ form | payment_button }}
                       {%- endif -%}
+                      <p class="not_available"><span>Note: </span>Not Available on Amazon or eBay</p>
                     </div>
                   {%- endform -%}
                 </product-form>
